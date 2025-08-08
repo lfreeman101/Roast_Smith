@@ -14,7 +14,7 @@ def hf_generate(prompt:str, token:str, model:str="mistralai/Mistral-7B-Instruct-
     headers={"Authorization": f"Bearer {token}"}
     payload={"inputs":prompt,"parameters":{"temperature":temp,"max_new_tokens":256,"return_full_text":False}}
     r=requests.post(api,headers=headers,json=payload,timeout=timeout); r.raise_for_status()
-    data=r.json()
+    data = r.json()
     if isinstance(data,list) and data and isinstance(data[0],dict):
         for k in ("generated_text","text","output_text"):
             if k in data[0] and isinstance(data[0][k],str): return data[0][k].strip()
