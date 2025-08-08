@@ -1,0 +1,123 @@
+pack_id: base_sardonic_v1
+locales:
+- en-US
+structures:
+  oneliner:
+  - intro?
+  - callout?
+  - body+
+  - outro?
+  threebeat:
+  - - intro
+  - - callout|body
+  - - body|outro
+  monologue:
+  - intro
+  - callout?
+  - body
+  - body
+  - outro
+slots:
+  intro:
+    intelligent:
+    - Let’s unpack that with actual logic.
+    - Time for a brief seminar in reality.
+    dark_wisdom:
+    - From the well of ignorance, you draw deeply.
+    - Your shadow speaks louder than your reason.
+    scorched_earth:
+    - You’ve stepped into the blast zone.
+    - I’m about to salt the earth where your argument stood.
+    mockumentary:
+    - 'Narrator: they did not, in fact, have a point.'
+    - And here we observe ignorance in the wild.
+    retro_pulp:
+    - It was a dark and stormy take.
+    - I lit a cigarette and watched logic leave the room.
+    bureaucratic_malice:
+    - Per the bylaws of common sense, you’re in violation.
+    - 'Please submit Form 404: Missing Evidence.'
+    overkill_80s:
+    - Cue the smoke machine—this is gonna hurt.
+    - Your take just crash‑landed in a power ballad.
+    wholesome_shade:
+    - Deep breath; let’s tidy this mess together.
+    - We can be kind and still be accurate.
+    petty_historian:
+    - As every century has taught us—poorly in your case—
+    - Historians hate to see it, yet here we are—
+    absurdist_theater:
+    - 'Enter: you, armed with a baguette and a Wi‑Fi bill.'
+    - The curtain rises on a casserole of opinions.
+  body:
+    intelligent:
+    - You brought vibes to a data fight.
+    - Correlation isn’t causation—surprise.
+    dark_wisdom:
+    - You’ve sown salt where compassion should bloom.
+    - The river of reason won’t carry such stones.
+    scorched_earth:
+    - Your logic is flimsier than gas station sushi.
+    - You’re the human version of a pop‑up ad.
+    mockumentary:
+    - Fueled by rumor and discount energy drinks.
+    - Migrates away from evidence at high speed.
+    retro_pulp:
+    - I’ve seen better logic in a busted jukebox.
+    - Your facts are counterfeit and your change is short.
+    bureaucratic_malice:
+    - This claim fails the audit.
+    - Your reasoning is pending review—indefinitely.
+    overkill_80s:
+    - Your facts are lip‑synced and off‑key.
+    - That’s a stage dive into irrelevance.
+    wholesome_shade:
+    - Your point needs a nap and a peer review.
+    - Let’s park that bias and try curiosity.
+    petty_historian:
+    - We archived this fallacy centuries ago.
+    - Your thesis collapses like a bad Roman bridge.
+    absurdist_theater:
+    - Your point wears tiny roller skates and keeps falling.
+    - A flock of metaphors just filed for overtime.
+  outro:
+    intelligent:
+    - This concludes today’s lecture in remedial reasoning.
+    - Consult a source older than your last tweet.
+    dark_wisdom:
+    - When you seek truth, recall this bruise.
+    - May silence one day answer you kindly.
+    scorched_earth:
+    - Enjoy your L—it’s all you’ll ever win.
+    - Now go shout at clouds somewhere quieter.
+    mockumentary:
+    - Documentary over—subject remains unaware.
+    - Roll credits over frantic backpedaling.
+    retro_pulp:
+    - Case closed; the perp was ignorance all along.
+    - Beat it, kid—this town chews up bad ideas.
+    bureaucratic_malice:
+    - Case closed; file under ‘irrelevant’.
+    - Request denied without option to appeal.
+    overkill_80s:
+    - Mic drop; encore denied.
+    - Fade out with your take in flames.
+    wholesome_shade:
+    - Proud of you for trying—next time, sources too.
+    - Let’s grow past this together.
+    petty_historian:
+    - Return to the archive when you can read.
+    - 'See exhibit A: the better argument.'
+    absurdist_theater:
+    - Blackout. Applause for surviving that scene.
+    - 'Intermission: try facts at the concession stand.'
+  callout:
+    all_white:
+    - '''All white'' isn''t a flex—it''s just the milk aisle.'
+    - Segregation chic isn’t coming back; retire the costume.
+    iq_bait:
+    - Quoting IQ like it’s a horoscope for bigots.
+    - Phrenology vibes at a facts fight—bold choice.
+    crime_stats:
+    - You cherry‑picked so hard the orchard filed a complaint.
+    - Per‑capita malpractice does not equal proof.
