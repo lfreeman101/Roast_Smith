@@ -1,10 +1,28 @@
-import os, time, json, asyncio, random, hashlib
+# Robust path shim + JS copy button
+import os, sys, importlib.util
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT = os.path.abspath(os.path.join(BASE_DIR, ".."))
+for p in (BASE_DIR, PARENT, os.path.join(BASE_DIR,'src'), os.path.join(PARENT,'src')):
+    ap = os.path.abspath(p)
+    if ap not in sys.path: sys.path.insert(0, ap)
+
+import time, json, asyncio, random, hashlib
 from typing import Dict, Any, List
 import streamlit as st
+from streamlit.components.v1 import html
 from src.engine import build_from_yaml
 from src.detectors import detect
 from src.ai import is_ollama_available, ollama_generate, hf_generate, judge_json
 from src.tts_export import synth_to_mp3
+
+def copy_button(text: str, label: str = "Copy"):
+    payload = json.dumps(text)
+    html(f"""
+        <button onclick='navigator.clipboard.writeText({payload})'
+                style="padding:0.5rem 0.9rem;border:1px solid #444;border-radius:8px;background:#1f2937;color:#e6e6ea;cursor:pointer">
+            {label}
+        </button>
+    """, height=46)
 
 APP_TITLE = "Roast Smith – Automated Comeback Generator"
 STYLES = ["intelligent","dark_wisdom","scorched_earth","mockumentary","retro_pulp","bureaucratic_malice","overkill_80s","wholesome_shade","petty_historian","absurdist_theater"]
@@ -32,7 +50,7 @@ def pick_backend():
     HF_TOKEN = st.secrets.get("HF_TOKEN", None)
     HF_MODEL = st.secrets.get("HF_MODEL", "mistralai/Mistral-7B-Instruct-v0.2")
     if is_ollama_available(): return ("ollama", None, None)
-    elif HF_TOKEN: return ("hf", HF_TOKEN, HF_MODEL)
+    elif HF_TOKEN: return ("hf", HF_MODEL, HF_MODEL)
     else: return ("none", None, None)
 
 def run_meter(steps: int = 8):
@@ -121,7 +139,6 @@ if generate and insult.strip():
     run_meter(steps=8)
     original, improved, scores = build_once()
 
-    # Diversity guard
     def ngrams_local(t, n=3):
         toks = [x for x in t.lower().split() if x.strip()]
         return set(tuple(toks[i:i+n]) for i in range(max(0, len(toks)-n+1)))
@@ -133,13 +150,12 @@ if generate and insult.strip():
         original, improved, scores = build_once()
     hist["prior_texts"].append(improved)
 
-    improved = apply_censorship(improved)
-    original = apply_censorship(original)
+    improved = apply_censorship(improved); original = apply_censorship(original)
 
     with tabs[0]:
         st.write(improved)
         cta1, cta2 = st.columns(2)
-        with cta1: st.copy_to_clipboard(improved, label="Copy")
+        with cta1: copy_button(improved, "Copy")
         with cta2:
             if st.button("Export MP3", type="secondary"):
                 path = os.path.join(os.getcwd(), export_name or "roast_output.mp3")
@@ -153,7 +169,7 @@ if generate and insult.strip():
 
     with tabs[1]:
         st.write(original)
-        st.copy_to_clipboard(original, label="Copy")
+        copy_button(original, "Copy")
 
     with st.expander("Debug Drawer", expanded=False):
         cA, cB, cC, cD = st.columns(4)
