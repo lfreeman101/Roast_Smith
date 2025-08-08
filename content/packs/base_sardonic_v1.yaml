@@ -26,8 +26,16 @@ slots:
     - From the well of ignorance, you draw deeply.
     - Your shadow speaks louder than your reason.
     scorched_earth:
-    - You’ve stepped into the blast zone.
-    - I’m about to salt the earth where your argument stood.
+     - "I’d compare you to something, but the landfill said it didn’t want the association, so—"
+      - "You radiate the warmth of a busted streetlamp in a condemned parking lot, and—"
+      - "If smugness was an Olympic sport, you’d still lose to a damp raccoon, because—"
+      - "I’ve met sewer clowns with better PR, and—"
+      - "Your vibe screams ‘haunted blender at 3 AM,’ so naturally—"
+      - "The sheer audacity of your existence is rivaled only by vending machines that eat twenties, and—"
+      - "If personalities were food, yours would be boiled lettuce left on a radiator, so—"
+      - "You’ve got the chaotic energy of a half-melted wax figure in a Chuck E. Cheese fire, and—"
+      - "You’re like a discount movie villain whose tragic backstory was cut for time, so—"
+      - "Somewhere, Darwin is rolling in his grave and muttering ‘maybe I was wrong,’ beca
     mockumentary:
     - 'Narrator: they did not, in fact, have a point.'
     - And here we observe ignorance in the wild.
@@ -57,7 +65,25 @@ slots:
     - You’ve sown salt where compassion should bloom.
     - The river of reason won’t carry such stones.
     scorched_earth:
-    - Your logic is flimsier than gas station sushi.
+     - "you’re a malfunctioning NPC in the world’s worst side quest."
+      - "you have all the sincerity of a ransom note written in glitter glue."
+      - "your relevance expired before the milk in my fridge."
+      - "you’re basically an unskippable YouTube ad for hemorrhoid cream."
+      - "you have the aesthetic of a tax audit in a swamp."
+      - "you’re the human equivalent of a dial-up modem screaming into the void."
+      - "you could be replaced by a soggy bag of drywall dust and nobody would notice."
+      - "you’re like a pop-up ad for toenail fungus treatment — persistent, unwanted, and vaguely itchy."
+      - "you have the social grace of a cat coughing up a hairball in a baptism."
+      - "you’re the plot twist in a low-budget horror movie that makes people root for the monster."
+      - "you’re an open mic joke that somehow became self-aware and regretted it instantly."
+      - "you’re what happens when spite gets a driver’s license and no supervision."
+      - "you’ve got the same emotional depth as a parking ticket in the rain."
+      - "you’re the uncanny valley version of someone worth knowing."
+      - "you’re basically a tax write-off nobody asked for."
+      - "you’re the energy drink version of food poisoning."
+      - "you’re a sad side quest in the open world game of life."
+      - "you’re the leftover ‘mystery meat’ of human interaction."
+      - "you’re a VHS instructional tape about disappointment."
     - You’re the human version of a pop‑up ad.
     mockumentary:
     - Fueled by rumor and discount energy drinks.
@@ -88,8 +114,16 @@ slots:
     - When you seek truth, recall this bruise.
     - May silence one day answer you kindly.
     scorched_earth:
-    - Enjoy your L—it’s all you’ll ever win.
-    - Now go shout at clouds somewhere quieter.
+   - "Now go haunt some other conversation."
+      - "Be gone before your mediocrity becomes airborne."
+      - "Kindly exit before you depreciate the property value of this chat."
+      - "And may your Wi-Fi be forever stuck buffering at 99%."
+      - "Consider this the obituary for your credibility."
+      - "I’d say ‘bless your heart,’ but I’m not a licensed exorcist."
+      - "Take this L, frame it, and hang it in your museum of bad choices."
+      - "The roast is over, but your public embarrassment is just beginning."
+      - "Go ahead — put that on your LinkedIn under ‘Special Skills.’"
+      - "May your next selfie be photobombed by your own regrets."
     mockumentary:
     - Documentary over—subject remains unaware.
     - Roll credits over frantic backpedaling.
